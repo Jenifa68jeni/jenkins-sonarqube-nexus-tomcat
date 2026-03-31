@@ -92,10 +92,37 @@ For `mvn sonar:sonar` to work in the pipeline, you need a proper Maven settings 
 </settings>
 
 
+# NEXUS INTEGRATION WITH JENKINS
 
-  
+## 🔹 Purpose
+- Upload build artifacts (.war, .jar) to Nexus repository for versioned storage.
 
+## 🔹 Configuration in Jenkins
+- Configured in Jenkins pipeline using the **Nexus Artifact Uploader** plugin.
+- Credentials stored in Jenkins: `nexus-credentials`.
+- Repository setup:
+  - **scopeindia-release-repository** → for release builds
+  - **scopeindia-snapshot-repository** → for snapshot builds
 
+---
 
+# TOMCAT INTEGRATION WITH JENKINS
 
+## 🔹 Purpose
+- Securely copy `.war` files from Jenkins workspace to the Tomcat server for deployment.
+
+## 🔹 Configuration in Jenkins
+- Deployment handled via Jenkins pipeline using **SSH Agent + SCP**.
+- Credentials stored in Jenkins: `Tomcat-Server-Agent`.
+- WAR file copied to Tomcat `webapps/` directory on EC2 instance.
+
+---
+
+## 📸 Nexus & Tomcat Screenshots
+
+![Nexus Dashboard](images/nexus-dashboard.png)  
+*Figure: Nexus Repository Manager configured with snapshot and release repositories*
+
+![Tomcat Dashboard](images/tomcat-dashboard.png)  
+*Figure: Apache Tomcat running on AWS EC2, receiving deployments from Jenkins*
 
