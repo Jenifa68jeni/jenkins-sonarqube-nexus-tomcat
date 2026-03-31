@@ -78,7 +78,7 @@
 - Navigate to: **Manage Jenkins → System → SonarQube Servers**
 - Configured server name: **sonar**
 - Added SonarQube server URL and token credential (previously created in SonarQube and stored in Jenkins credentials)
-
+![image alt](https://github.com/Jenifa68jeni/jenkins-sonarqube-nexus-tomcat/blob/0b0cdce009db8a34e9dca49dfaa69bc63037ce71/Screenshot%202026-03-31%20112636.png)
 ## 🔹 Maven Settings Requirement
 For `mvn sonar:sonar` to work in the pipeline, you need a proper Maven settings file:
 
