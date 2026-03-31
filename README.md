@@ -71,6 +71,26 @@
 - Nexus credentials: Used by Jenkins to upload artifacts (.war) into Nexus repositories.  
 - Tomcat SSH key: Enables Jenkins to securely connect and deploy applications to the Tomcat server.  
 - SonarQube token: Allows Jenkins to authenticate with SonarQube for static code analysis.
+![image alt](https://github.com/Jenifa68jeni/jenkins-sonarqube-nexus-tomcat/blob/b5a6c376c763189f283201862711b5119e125e88/Screenshot%202026-03-31%20112241.png)
+# SONARQUBE INTEGRATION WITH JENKINS
+
+## 🔹 Configuration in Jenkins
+- Navigate to: **Manage Jenkins → System → SonarQube Servers**
+- Configured server name: **sonar**
+- Added SonarQube server URL and token credential (previously created in SonarQube and stored in Jenkins credentials)
+
+## 🔹 Maven Settings Requirement
+For `mvn sonar:sonar` to work in the pipeline, you need a proper Maven settings file:
+
+**Path:** `/var/lib/jenkins/.m2/settings.xml`
+
+```xml
+<settings>
+  <pluginGroups>
+    <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+  </pluginGroups>
+</settings>
+
 
 
   
