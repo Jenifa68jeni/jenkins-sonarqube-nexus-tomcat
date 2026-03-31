@@ -1,0 +1,11 @@
+# CI/CD PIPELINE IMPLEMENTATION (JENKINS)
+
+## 🔹 Pipeline Stages
+
+| Stage            | What it does                                                                 | Output / Result                                      |
+|------------------|-------------------------------------------------------------------------------|------------------------------------------------------|
+| Clone Repo       | Clones the master branch from GitHub into Jenkins workspace                   | Source code available in workspace                   |
+| Maven Build      | Runs `mvn -B clean package` using Maven3                                      | WAR generated: `target/maven-web-app.war`            |
+| SonarQube Analysis | Runs `mvn sonar:sonar` (or direct plugin call) and publishes report to SonarQube | Latest analysis visible in SonarQube                 |
+| Nexus Upload     | Uploads generated WAR/JAR to Nexus repository using Nexus Artifact Uploader   | Artifact stored and versioned in Nexus               |
+| Tomcat Deployment| Deploys WAR file to Tomcat server using SSH Agent + SCP                       | Application deployed and accessible via Tomcat server
