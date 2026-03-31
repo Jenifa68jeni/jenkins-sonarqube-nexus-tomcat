@@ -1,0 +1,13 @@
+# PROJECT DETAILS
+
+| Item                  | Details                                                   |
+|-----------------------|-----------------------------------------------------------|
+| Project Title         | End to End CI/CD Pipeline (Jenkins + SonarQube + Nexus + Tomcat) |
+| Domains               | DevOps / CI-CD Automation                                |
+| Application Type      | Java Maven Application (.War)                            |
+| Source Code Repository| https://github.com/suffixscope/maven-web-app             |
+| Deployment Target     | Apache Tomcat (War Deployment)                           |
+| Cloud Platform        | AWS EC2                                                  |
+| Pipeline Tool         | Jenkins                                                  |
+| Code Quality          | SonarQube                                                |
+| Artifact Repository   | Nexus Repository Manager                                 |
