@@ -19,6 +19,18 @@
 ## 🔹 Access URL
 - SonarQube UI accessible at:  http://44.220.157.36:9000/
   ![image alt](https://github.com/Jenifa68jeni/jenkins-sonarqube-nexus-tomcat/blob/e32b486cc91d896d45177a70720e55f99ca67e4e/Screenshot%202026-03-31%20105606.png)
+##Configuration Steps:
+•	Logged into the SonarQube UI
+•	Created project: maven-web-app
+
+
+## 🔹 Installation
+- SonarQube was installed and started on the dedicated EC2 instance (`sonar`).
+- The service was launched using the extracted binaries and the `startup.sh` script.
+
+## 🔹 Access URL
+- SonarQube UI accessible at:  
+
 # NEXUS SETUP
 
 ## 🔹 Installation
