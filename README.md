@@ -37,4 +37,15 @@
 ## 🔹 Access URL
 - Nexus UI accessible at:  http://34.229.76.233:8081/
 
+## 🔹 Configuration Steps
+- Logged into the Nexus UI  
+- Created Maven (hosted) repositories:  
+- **scopeindia-snapshot-repository** → for snapshot builds  
+- **scopeindia-release-repository** → for release builds  
+- Confirmed repositories are available for publishing artifacts from Jenkins
+
+
+
+
+
 
