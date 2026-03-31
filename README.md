@@ -25,23 +25,8 @@
 - Logged into the SonarQube UI  
 - Created project: **maven-web-app**  
 - Generated a token/secret for Jenkins integration  
-- Stored the token securely in Jenkins credentials (`Id: sonar`)
-
-
-## 📸 SonarQube Screenshot
-
-![SonarQube Dashboard](images/sonarqube-dashboard.png)
-
-*Figure: SonarQube running on AWS EC2, integrated with Jenkins for static code analysis*
-
-
-
-## 🔹 Installation
-- SonarQube was installed and started on the dedicated EC2 instance (`sonar`).
-- The service was launched using the extracted binaries and the `startup.sh` script.
-
-## 🔹 Access URL
-- SonarQube UI accessible at:  
+- Stored the token securely in Jenkins credentials 
+![image alt](https://github.com/Jenifa68jeni/jenkins-sonarqube-nexus-tomcat/blob/92355ee317e75df2b36a106ea9e9837fd111c2e0/Screenshot%202026-03-31%20111315.png)
 
 # NEXUS SETUP
 
