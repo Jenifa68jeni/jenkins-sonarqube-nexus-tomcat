@@ -1,0 +1,15 @@
+
+
+**Flow:**  
+GitHub → Jenkins Pipeline → (Build/Test) → SonarQube Analysis → Nexus Upload → Tomcat Deployment → Verification
+
+---
+
+COMPONENTS
+
+- **GitHub**: Stores and manages the source code repository  
+- **Jenkins**: Orchestrates the CI/CD pipeline and automates build/test stages  
+- **SonarQube**: Performs static code analysis and generates quality reports  
+- **Nexus Repository Manager**: Stores and versions the build artifacts (.war)  
+- **Apache Tomcat**: Hosts and runs the deployed web application  
+- **Browser**: Used to validate successful deployment by accessing the application
