@@ -84,7 +84,7 @@ For `mvn sonar:sonar` to work in the pipeline, you need a proper Maven settings 
 
 **Path:** `/var/lib/jenkins/.m2/settings.xml`
 
-```xml
+
 <settings>
   <pluginGroups>
     <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
@@ -116,13 +116,4 @@ For `mvn sonar:sonar` to work in the pipeline, you need a proper Maven settings 
 - Credentials stored in Jenkins: `Tomcat-Server-Agent`.
 - WAR file copied to Tomcat `webapps/` directory on EC2 instance.
 
----
-
-## 📸 Nexus & Tomcat Screenshots
-
-![Nexus Dashboard](images/nexus-dashboard.png)  
-*Figure: Nexus Repository Manager configured with snapshot and release repositories*
-
-![Tomcat Dashboard](images/tomcat-dashboard.png)  
-*Figure: Apache Tomcat running on AWS EC2, receiving deployments from Jenkins*
 
