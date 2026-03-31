@@ -42,8 +42,38 @@
 - Created Maven (hosted) repositories:  
 - **scopeindia-snapshot-repository** → for snapshot builds  
 - **scopeindia-release-repository** → for release builds  
-- Confirmed repositories are available for publishing artifacts from Jenkins
+- Confirmed repositories are available for publishing artifacts from Jenkins.
+![image alt](https://github.com/Jenifa68jeni/jenkins-sonarqube-nexus-tomcat/blob/7b2495c7cd782e2a11caf48aa6a232be3a718046/Screenshot%202026-03-31%20111948.png)
 
+# JENKINS SETUP
+
+## 🔹 Installation
+- Jenkins was installed and started on the dedicated EC2 instance (`jenkins`).
+
+## 🔹 Access URL
+- Jenkins UI accessible at:  http://34.201.151.8:8080/
+  
+## 🔹 Plugins Used
+- **SonarQube Scanner for Jenkins** → integrates SonarQube analysis into the pipeline  
+- **Nexus Artifact Uploader** → publishes build artifacts to Nexus repositories  
+- **SSH Agent** → enables secure deployment to remote servers (e.g., Tomcat)
+
+## 🔹 Global Tool Configuration
+- Navigate to: **Manage Jenkins → Global Tool Configuration**  
+- Configured Maven installation with the name: **Maven3**
+
+## 🔹 Credentials Stored in Jenkins
+- **Nexus credentials** → `Id: nexus-credentials`  
+- **Tomcat SSH key** → `Id: Tomcat-Server-Agent`  
+- **SonarQube token** → `Id: sonar`
+
+### Purpose
+- Nexus credentials: Used by Jenkins to upload artifacts (.war) into Nexus repositories.  
+- Tomcat SSH key: Enables Jenkins to securely connect and deploy applications to the Tomcat server.  
+- SonarQube token: Allows Jenkins to authenticate with SonarQube for static code analysis.
+
+
+  
 
 
 
