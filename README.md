@@ -116,5 +116,43 @@ For `mvn sonar:sonar` to work in the pipeline, you need a proper Maven settings 
 - Deployment handled via Jenkins pipeline using **SSH Agent + SCP**.
 - Credentials stored in Jenkins: `Tomcat-Server-Agent`.
 - WAR file copied to Tomcat `webapps/` directory on EC2 instance.
+# TESTING & VERIFICATION
+![image alt](https://github.com/Jenifa68jeni/jenkins-sonarqube-nexus-tomcat/blob/3f3dad7e96374cb728e67e181dfddb89582fbfa3/Screenshot%202026-03-31%20114335.png)
+![image alt](https://github.com/Jenifa68jeni/jenkins-sonarqube-nexus-tomcat/blob/a8c0748e8f8ca84ecf74afacb549ebef732f9ac7/Screenshot%202026-03-31%20114630.png)
+![image alt](https://github.com/Jenifa68jeni/jenkins-sonarqube-nexus-tomcat/blob/3b999dc431c0d0a48d1202d4a054d7bb48b082c3/Screenshot%202026-03-31%20114745.png)
+# NEXUS UPLOAD – SNAPSHOT VS RELEASE
+
+## 🔹 Current Pipeline
+- By default, the pipeline uploads artifacts to the **release repository**.  
+- Example: `scopeindia-release-repository` with version `1.2`.
+
+## 🔹 Switching to Snapshot Upload
+To upload to the **snapshot repository**, update the Nexus upload stage values:
+
+stage('Nexus Upload - Snapshot') {
+    steps {
+        nexusArtifactUploader(
+            nexusVersion: 'nexus3',
+            protocol: 'http',
+            nexusUrl: '34.229.76.233:8081',
+            groupId: 'org.scopeindia',
+            version: '1.2-SNAPSHOT',
+            repository: 'scopeindia-snapshot-repository',
+            credentialsId: 'nexus-credentials',
+            artifacts: [[artifactId: 'maven-web-app', classifier: '', file: 'target/maven-web-app.war', type: 'war']]
+        )
+    }
+}
+![image alt](https://github.com/Jenifa68jeni/jenkins-sonarqube-nexus-tomcat/blob/ddd666e629dbdac9f5ceaf5c4e06313d3c4f5327/Screenshot%202026-03-31%20115358.png)
+# APPLICATION DEPLOYED ON TOMCAT
+
+## 🔹 Deployment Process
+- The WAR file (`maven-web-app.war`) was copied into Tomcat’s `webapps/` directory on the EC2 instance.
+- Verified deployment by listing contents of the `webapps/` folder:
+![image alt](https://github.com/Jenifa68jeni/jenkins-sonarqube-nexus-tomcat/blob/6ee17dbc4ee3d7dd6c8395d38c273c89a2b32be9/Screenshot%202026-03-31%20115708.png)
+
+
+
+
 
 
