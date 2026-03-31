@@ -1,0 +1,19 @@
+# CONCLUSION
+
+This project demonstrates a complete **CI/CD pipeline** implemented on AWS using:
+
+- **Jenkins** → Automation server orchestrating the pipeline  
+- **SonarQube** → Continuous code quality inspection and static analysis  
+- **Nexus** → Artifact repository for storing and versioning build outputs  
+- **Tomcat** → Application server for deployment and end-user access  
+
+---
+
+## 🔹 Key Achievements
+- ✅ Automated build and packaging with Maven  
+- ✅ Integrated SonarQube for static code analysis and quality gates  
+- ✅ Nexus repositories configured for both **snapshot** and **release** uploads  
+- ✅ Secure deployment of WAR files to Tomcat via Jenkins pipeline  
+- ✅ Application successfully accessible in browser after deployment  
+
+
