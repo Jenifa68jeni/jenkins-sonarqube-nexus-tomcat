@@ -12,6 +12,15 @@
 | Code Quality          | SonarQube                                                |
 | Artifact Repository   | Nexus Repository Manager                                 |
 
+| Tool      | Version        |
+|-----------|----------------|
+| Jenkins   | 2.528.3        |
+| Java      | 17.0.17        |
+| SonarQube | 9.9.8.100196   |
+| Maven     | 3.8.7          |
+| Tomcat    | 10.1.50        |
+| Nexus     | 3.88.0-08      |
+
 Implement a complete CI/CD workflow for a Maven-based Java web application to:
 
 - Automatically pull source code from GitHub  
